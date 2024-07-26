@@ -21,7 +21,7 @@ export const PostCard = ({
       <div className="w-full flex items-center justify-between h-16 px-4">
         <div className="flex items-center gap-3">
           <img src="/avatar.png" alt="avatar" width={40} height={40} />
-          <Link to={`/user/${username}`} className="text-lg font-semibold">
+          <Link to={`/${username}`} className="text-lg font-semibold">
             {username}
           </Link>
         </div>

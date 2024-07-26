@@ -24,9 +24,9 @@ export const SignInForm = () => {
       error: "Ошибка при авторизации",
     });
 
-    const { token, userData } = await userPromise;
+    const { userData } = await userPromise;
 
-    setUser({ token, userData });
+    setUser({ userData });
     navigate("/");
   };
   const inputClassName =

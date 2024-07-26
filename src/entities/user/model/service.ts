@@ -1,17 +1,7 @@
-import { axiosInstance } from "src/shared/api";
 import axios from "axios";
+import { axiosInstance } from "src/shared/api";
+import { ReturnData } from "./types";
 
-
-interface ReturnData {
-  token: string;
-  userData: {
-    id: number;
-    email: string;
-    username: string;
-    fullname: string;
-    profileImageUrl: string;
-  };
-}
 
 export const fetchUser = async (): Promise<ReturnData> => {
   try {

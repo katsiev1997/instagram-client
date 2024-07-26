@@ -33,7 +33,7 @@ export const useUserSearch = () => {
   ) => {
     setUsername("");
     setUsers([]);
-    navigate(`/user/${username}`);
+    navigate(`/${username}`);
   };
 
   return {

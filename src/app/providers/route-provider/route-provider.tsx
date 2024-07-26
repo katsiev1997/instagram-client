@@ -20,7 +20,7 @@ const RouteProvider = () => {
         <Route path="/messenger" element={<MessengerPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/profile-edit" element={<ProfileEditPage />} />
-        <Route path="/user/:id" element={<UserPage />} />
+        <Route path="/:username" element={<UserPage />} />
         <Route path="/add-post" element={<AddPostPage />} />
         <Route path="*" element={<HomePage />} />
       </Route>

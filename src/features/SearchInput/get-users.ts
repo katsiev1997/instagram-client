@@ -10,12 +10,7 @@ export type User = {
 
 export const getUsers = async (username: string): Promise<User[]> => {
   try {
-    const token = localStorage.getItem("token");
-    const response = await axiosInstance.get<User[]>(`/users/get/${username}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    const response = await axiosInstance.get<User[]>(`/users/get/${username}`);
     return response.data || [];
   } catch (error) {
     console.log(error);

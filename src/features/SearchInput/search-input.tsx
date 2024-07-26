@@ -14,14 +14,7 @@ export const SearchInput = () => {
 
   const navigate = useNavigate();
 
-  const divClass = (length: number, i: number) => {
-    return (
-      "flex items-center gap-3  h-10 pl-5 hover:bg-slate-100 cursor-pointer" +
-      `${i === length - 1 ? " rounded-b-lg" : " border-b border-border"} ${
-        i === 0 ? " rounded-t-lg" : ""
-      }`
-    );
-  };
+ 
 
   return (
     <div className="relative">
@@ -40,12 +33,12 @@ export const SearchInput = () => {
         alt="search"
       />
       {isFocused && username && users.length > 0 && (
-        <div className="absolute top-10 z-10 bg-[#fff] w-96 border border-blue rounded-lg">
-          {users.map((user, i) => (
+        <div className="absolute top-10 z-10 bg-[#fff] w-96 rounded-lg border border-border py-2 ">
+          {users.map((user) => (
             <div
               key={user.id}
               onMouseDown={() => handleUserSelect(user.username, navigate)}
-              className={divClass(users.length, i)}
+              className="hover:bg-blue hover:bg-opacity-10 cursor-pointer pl-3 h-10 flex items-center gap-3"
             >
               {user.profileImageUrl && (
                 <img
@@ -55,6 +48,7 @@ export const SearchInput = () => {
                   height={40}
                 />
               )}
+              <img src="/profile-s.png" alt="profile-s" />
               <p className="font-semibold">{user.username}</p>
             </div>
           ))}
